@@ -5,4 +5,11 @@
 {% block body %}
     <h1>Bonjour Symfony !</h1>
     <p>Vous avez visité cette page {{ nb_visites }} fois.</p>
+
+    <h2>Derniers articles publiés</h2>
+    {% for article in articles %}
+        <h3>{{ article.titre }}</h3>
+    {% else %}
+        <p>Aucun article publié pour le moment.</p>
+    {% endfor %}
 {% endblock %}
